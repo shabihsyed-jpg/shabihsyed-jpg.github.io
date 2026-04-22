@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<!-- saved from url=(0243)file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honeycomb — Built for the Agent Era</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --slate:  #25303E;
+      --honey:  #FFB000;
+      --sky:    #0077CC;
+      --lime:   #64BA00;
+      --coral:  #E65B53;
+      --gray:   #717A89;
+      --light:  #F7F6F2;
+      --white:  #FFFFFF;
+      --dark-text: #1E2730;
+      --body-text: #374151;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: var(--body-text);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ─── NAV ──────────────────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--slate);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      border-bottom: 2px solid var(--honey);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-hex {
+      width: 28px; height: 28px;
+      background: var(--honey);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+    .nav-logo span {
+      font-size: 18px; font-weight: 700; color: var(--white); letter-spacing: -0.3px;
+    }
+    .nav-links {
+      display: flex; gap: 32px; list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--honey); }
+    .nav-actions { display: flex; gap: 12px; align-items: center; }
+    .btn-ghost {
+      background: transparent; border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white); padding: 8px 18px; border-radius: 6px;
+      font-size: 14px; font-weight: 500; cursor: pointer; text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--honey); color: var(--honey); }
+    .btn-primary {
+      background: var(--honey); color: var(--slate);
+      padding: 9px 20px; border-radius: 6px; border: none;
+      font-size: 14px; font-weight: 700; cursor: pointer; text-decoration: none;
+      transition: filter 0.2s;
+    }
+    .btn-primary:hover { filter: brightness(1.08); }
+
+    /* ─── HERO ─────────────────────────────────────────────────────────── */
+    .hero {
+      background: var(--slate);
+      padding: 100px 48px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+      background: var(--honey);
+    }
+    .hero-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: center;
+    }
+    .hero-label {
+      display: inline-block;
+      background: rgba(255, 176, 0, 0.15);
+      color: var(--honey); font-size: 12px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 4px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255,176,0,0.3);
+    }
+    .hero h1 {
+      font-size: 56px; font-weight: 900; line-height: 1.05;
+      color: var(--white); letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--honey); font-style: normal; }
+    .hero-sub {
+      font-size: 19px; color: rgba(255,255,255,0.72);
+      line-height: 1.55; margin-bottom: 36px; max-width: 540px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-hero-primary {
+      background: var(--honey); color: var(--slate);
+      padding: 14px 28px; border-radius: 7px; border: none;
+      font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none;
+      display: inline-block; transition: filter 0.2s;
+    }
+    .btn-hero-primary:hover { filter: brightness(1.08); }
+    .btn-hero-ghost {
+      background: transparent; border: 1.5px solid rgba(255,255,255,0.35);
+      color: var(--white); padding: 14px 28px; border-radius: 7px;
+      font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none;
+      display: inline-block; transition: border-color 0.2s;
+    }
+    .btn-hero-ghost:hover { border-color: var(--honey); color: var(--honey); }
+
+    /* Hero card (right side) */
+    .hero-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,176,0,0.2);
+      border-radius: 12px; padding: 28px; position: relative;
+    }
+    .hero-card-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--honey); margin-bottom: 16px;
+    }
+    .metric-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin-bottom: 12px;
+    }
+    .metric {
+      background: rgba(255,255,255,0.08); border-radius: 8px;
+      padding: 14px; text-align: center;
+    }
+    .metric-val {
+      font-size: 26px; font-weight: 900; color: var(--honey);
+      line-height: 1; display: block; margin-bottom: 4px;
+    }
+    .metric-key { font-size: 11px; color: rgba(255,255,255,0.55); font-weight: 500; }
+    .hero-card-divider {
+      height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0;
+    }
+    .agent-badge {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+    }
+    .agent-dot {
+      width: 8px; height: 8px; background: var(--lime); border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px rgba(100,186,0,0.6);
+    }
+    .agent-label { font-size: 12px; color: rgba(255,255,255,0.65); }
+    .hero-trust {
+      margin-top: 48px; padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-trust-label {
+      font-size: 12px; color: rgba(255,255,255,0.4);
+      letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 18px;
+    }
+    .logo-strip {
+      display: flex; align-items: center; gap: 36px; flex-wrap: wrap;
+    }
+    .logo-pill {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px; padding: 7px 16px;
+      font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.55);
+      letter-spacing: 0.3px;
+    }
+
+    /* ─── STORY SECTION ────────────────────────────────────────────────── */
+    .section { padding: 96px 48px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .story {
+      background: var(--slate); color: var(--white);
+    }
+    .story-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .story-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--honey); margin-bottom: 20px;
+    }
+    .story h2 {
+      font-size: 40px; font-weight: 900; line-height: 1.1;
+      color: var(--white); letter-spacing: -1px; margin-bottom: 20px;
+    }
+    .story h2 em { color: var(--honey); font-style: normal; }
+    .story p { font-size: 17px; color: rgba(255,255,255,0.7); line-height: 1.65; margin-bottom: 16px; }
+    .story-before-after {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px;
+    }
+    .ba-card {
+      border-radius: 10px; padding: 20px;
+    }
+    .ba-before {
+      background: rgba(230, 91, 83, 0.12); border: 1px solid rgba(230,91,83,0.3);
+    }
+    .ba-after {
+      background: rgba(100,186,0,0.1); border: 1px solid rgba(100,186,0,0.3);
+    }
+    .ba-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .ba-before .ba-label { color: var(--coral); }
+    .ba-after .ba-label { color: var(--lime); }
+    .ba-card p { font-size: 13px; color: rgba(255,255,255,0.7); margin: 0; line-height: 1.5; }
+
+    /* ─── THREE LAYERS ─────────────────────────────────────────────────── */
+    .layers { background: var(--light); }
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--honey); margin-bottom: 14px; display: block;
+    }
+    .section-header h2 {
+      font-size: 38px; font-weight: 900; line-height: 1.1;
+      color: var(--slate); letter-spacing: -0.8px; margin-bottom: 14px;
+    }
+    .section-header p { font-size: 18px; color: var(--gray); max-width: 560px; margin: 0 auto; }
+    .layers-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .layer-card {
+      border-radius: 12px; padding: 32px; position: relative; overflow: hidden;
+    }
+    .layer-card-foundation { background: var(--slate); color: var(--white); }
+    .layer-card-with { background: var(--honey); color: var(--slate); }
+    .layer-card-for { background: var(--sky); color: var(--white); }
+    .layer-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      opacity: 0.7; margin-bottom: 12px; display: block;
+    }
+    .layer-card h3 { font-size: 20px; font-weight: 900; line-height: 1.2; margin-bottom: 12px; }
+    .layer-card p { font-size: 14px; opacity: 0.8; line-height: 1.6; margin-bottom: 16px; }
+    .layer-features { list-style: none; }
+    .layer-features li {
+      font-size: 13px; padding: 5px 0;
+      display: flex; gap: 8px; align-items: flex-start; opacity: 0.85;
+    }
+    .layer-features li::before { content: '→'; flex-shrink: 0; font-weight: 700; }
+
+    /* ─── AGENTIC TIMELINES ────────────────────────────────────────────── */
+    .feature-spotlight {
+      background: var(--white);
+      border-top: 1px solid #E8E6E0;
+      border-bottom: 1px solid #E8E6E0;
+    }
+    .feature-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .feature-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--sky); margin-bottom: 14px; display: block;
+    }
+    .feature-grid h2 {
+      font-size: 34px; font-weight: 900; line-height: 1.15;
+      color: var(--slate); letter-spacing: -0.7px; margin-bottom: 16px;
+    }
+    .feature-grid p { font-size: 16px; color: var(--gray); line-height: 1.65; margin-bottom: 20px; }
+    .feature-list { list-style: none; }
+    .feature-list li {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 10px 0; border-bottom: 1px solid #F0EEE8; font-size: 15px;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .feature-list .fi {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--sky); flex-shrink: 0; margin-top: 1px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .feature-list .fi-gold { background: var(--honey); }
+    .fi-dot { width: 8px; height: 8px; background: white; border-radius: 50%; }
+    .feature-list strong { color: var(--slate); display: block; margin-bottom: 2px; font-size: 14px; }
+    .feature-list span { color: var(--gray); font-size: 13px; line-height: 1.5; }
+
+    /* Timeline visual mock */
+    .timeline-mock {
+      background: var(--slate); border-radius: 14px;
+      padding: 24px; position: relative;
+    }
+    .tm-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 18px;
+    }
+    .tm-title { color: var(--white); font-size: 13px; font-weight: 700; }
+    .tm-badge {
+      background: rgba(100,186,0,0.2); color: var(--lime);
+      font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px;
+      border: 1px solid rgba(100,186,0,0.3);
+    }
+    .tm-stats {
+      display: flex; gap: 12px; margin-bottom: 20px;
+    }
+    .tm-stat {
+      background: rgba(255,255,255,0.07); border-radius: 6px;
+      padding: 8px 12px; flex: 1; text-align: center;
+    }
+    .tm-stat-val { font-size: 18px; font-weight: 900; color: var(--honey); display: block; }
+    .tm-stat-key { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+    .tm-lane { margin-bottom: 10px; }
+    .tm-lane-label { font-size: 10px; color: rgba(255,255,255,0.4); margin-bottom: 4px; font-weight: 600; letter-spacing: 0.5px; }
+    .tm-bar-row { display: flex; gap: 4px; align-items: center; height: 20px; }
+    .tm-bar {
+      height: 14px; border-radius: 3px; display: flex; align-items: center;
+      padding: 0 6px; font-size: 9px; font-weight: 700; letter-spacing: 0.3px;
+    }
+    .tm-bar-agent { background: rgba(255,176,0,0.35); color: var(--honey); }
+    .tm-bar-llm { background: rgba(0,119,204,0.4); color: #7BBFEF; }
+    .tm-bar-tool { background: rgba(100,186,0,0.3); color: var(--lime); }
+    .tm-bar-err { background: rgba(230,91,83,0.35); color: #F0958F; }
+    .tm-gap { flex: 1; }
+
+    /* ─── CANVAS FEATURE ───────────────────────────────────────────────── */
+    .canvas-feature { background: var(--light); }
+    .canvas-mock {
+      background: var(--white); border-radius: 14px;
+      border: 1px solid #E0DDD6;
+      overflow: hidden;
+    }
+    .cm-topbar {
+      background: var(--slate); padding: 10px 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .cm-dots { display: flex; gap: 6px; }
+    .cm-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); }
+    .cm-title { color: rgba(255,255,255,0.65); font-size: 12px; font-weight: 600; }
+    .cm-badge-live {
+      margin-left: auto; background: rgba(100,186,0,0.2); color: var(--lime);
+      font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+    }
+    .cm-body { display: grid; grid-template-columns: 200px 1fr; height: 220px; }
+    .cm-sidebar {
+      background: #F7F6F2; border-right: 1px solid #E0DDD6;
+      padding: 12px; font-size: 11px;
+    }
+    .cm-sidebar-label { color: var(--gray); font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; font-size: 10px; }
+    .cm-skill {
+      padding: 7px 10px; border-radius: 6px; background: var(--white);
+      margin-bottom: 6px; font-size: 11px; font-weight: 600; color: var(--slate);
+      border: 1px solid #E0DDD6; cursor: pointer;
+    }
+    .cm-skill.active { border-color: var(--honey); background: rgba(255,176,0,0.07); }
+    .cm-main { padding: 14px 16px; overflow: hidden; }
+    .cm-chat-bubble {
+      padding: 8px 12px; border-radius: 8px; margin-bottom: 8px; max-width: 90%;
+      font-size: 12px; line-height: 1.5;
+    }
+    .cm-agent {
+      background: var(--slate); color: var(--white);
+      border-bottom-left-radius: 2px;
+    }
+    .cm-user {
+      background: rgba(255,176,0,0.12); color: var(--slate);
+      margin-left: auto; border-bottom-right-radius: 2px;
+      border: 1px solid rgba(255,176,0,0.2);
+    }
+    .cm-agent strong { color: var(--honey); }
+
+    /* ─── OTEL SECTION ─────────────────────────────────────────────────── */
+    .otel { background: var(--slate); color: var(--white); }
+    .otel-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 380px; gap: 72px; align-items: center;
+    }
+    .otel h2 {
+      font-size: 38px; font-weight: 900; line-height: 1.1;
+      color: var(--white); letter-spacing: -0.8px; margin-bottom: 16px;
+    }
+    .otel h2 em { color: var(--honey); font-style: normal; }
+    .otel p { font-size: 17px; color: rgba(255,255,255,0.68); line-height: 1.65; margin-bottom: 16px; }
+    .otel-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,176,0,0.12); border: 1px solid rgba(255,176,0,0.3);
+      border-radius: 6px; padding: 7px 14px; margin-bottom: 24px;
+    }
+    .otel-badge span { font-size: 13px; font-weight: 700; color: var(--honey); }
+    .otel-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px; padding: 28px;
+    }
+    .otel-card h4 {
+      font-size: 13px; font-weight: 700; color: var(--honey); letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .otel-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 14px; color: rgba(255,255,255,0.8);
+    }
+    .otel-item:last-child { border-bottom: none; }
+    .otel-check {
+      width: 20px; height: 20px; border-radius: 50%; background: var(--lime);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      font-size: 11px; color: white; font-weight: 900;
+    }
+    .otel-attr {
+      display: flex; gap: 6px; flex-wrap: wrap; margin-top: 20px;
+    }
+    .attr-chip {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px; padding: 4px 10px; font-size: 11px;
+      color: rgba(255,255,255,0.5); font-family: 'Courier New', monospace;
+    }
+
+    /* ─── SOCIAL PROOF ─────────────────────────────────────────────────── */
+    .proof { background: var(--light); }
+    .proof-header { text-align: center; margin-bottom: 48px; }
+    .stats-row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px; margin-bottom: 56px;
+    }
+    .stat-card {
+      background: var(--white); border-radius: 12px; padding: 32px;
+      border: 1px solid #E8E6E0; text-align: center;
+    }
+    .stat-num {
+      font-size: 44px; font-weight: 900; color: var(--honey);
+      display: block; letter-spacing: -1px; line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label { font-size: 15px; color: var(--slate); font-weight: 600; margin-bottom: 6px; }
+    .stat-sub { font-size: 13px; color: var(--gray); line-height: 1.4; }
+    .quote-card {
+      background: var(--slate); border-radius: 14px; padding: 48px 56px;
+      position: relative; overflow: hidden;
+    }
+    .quote-card::before {
+      content: '"'; position: absolute;
+      top: -10px; left: 40px;
+      font-size: 160px; font-weight: 900; color: rgba(255,176,0,0.12);
+      line-height: 1; font-family: Georgia, serif;
+    }
+    .quote-text {
+      font-size: 22px; font-weight: 600; color: var(--white);
+      line-height: 1.5; margin-bottom: 24px; position: relative;
+      font-style: italic; max-width: 780px;
+    }
+    .quote-attribution { display: flex; align-items: center; gap: 16px; }
+    .quote-avatar {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--honey);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 900; color: var(--slate);
+    }
+    .quote-name { font-size: 15px; font-weight: 700; color: var(--white); }
+    .quote-role { font-size: 13px; color: rgba(255,255,255,0.55); }
+
+    /* ─── CTA BANNER ───────────────────────────────────────────────────── */
+    .cta-banner {
+      background: var(--honey); padding: 80px 48px; text-align: center;
+    }
+    .cta-banner h2 {
+      font-size: 42px; font-weight: 900; color: var(--slate);
+      letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1;
+    }
+    .cta-banner p {
+      font-size: 18px; color: rgba(37,48,62,0.75); margin-bottom: 36px; line-height: 1.5;
+    }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-dark {
+      background: var(--slate); color: var(--white);
+      padding: 14px 32px; border-radius: 7px; border: none;
+      font-size: 16px; font-weight: 700; cursor: pointer; text-decoration: none;
+      display: inline-block; transition: filter 0.2s;
+    }
+    .btn-cta-dark:hover { filter: brightness(1.15); }
+    .btn-cta-ghost {
+      background: transparent; border: 2px solid rgba(37,48,62,0.3);
+      color: var(--slate); padding: 14px 32px; border-radius: 7px;
+      font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none;
+      display: inline-block; transition: border-color 0.2s;
+    }
+    .btn-cta-ghost:hover { border-color: var(--slate); }
+
+    /* ─── FOOTER ────────────────────────────────────────────────────────── */
+    footer {
+      background: var(--slate); color: rgba(255,255,255,0.55);
+      padding: 56px 48px 32px;
+    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top {
+      display: grid; grid-template-columns: 240px repeat(4, 1fr); gap: 40px;
+      padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 28px;
+    }
+    .footer-brand { }
+    .footer-brand .nav-logo { margin-bottom: 14px; }
+    .footer-brand p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.45); }
+    .footer-col h5 {
+      font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: rgba(255,255,255,0.8); margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul a {
+      font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--honey); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a {
+      font-size: 12px; color: rgba(255,255,255,0.3); text-decoration: none;
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ────────────────────────────────────────────────────────────── -->
+<nav>
+  <a class="nav-logo" href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">
+    <div class="nav-logo-hex"></div>
+    <span>honeycomb</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Platform</a></li>
+    <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">AI Agents</a></li>
+    <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Solutions</a></li>
+    <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Customers</a></li>
+    <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Pricing</a></li>
+    <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Docs</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#" class="btn-ghost">Login</a>
+    <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#" class="btn-primary">Start Free</a>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Built for the<br><em>Agent Era.</em></h1>
+      <p class="hero-sub">The observability platform for engineering teams and their agents. Ask any question of your production data — for services, AI features, and the AI agents you now operate — and get real-time answers.</p>
+      <div class="hero-actions">
+        <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#" class="btn-hero-primary">Start for free</a>
+        <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#" class="btn-hero-ghost">See a live demo →</a>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-label">Live agent conversation</div>
+        <div class="metric-row">
+          <div class="metric">
+            <span class="metric-val">3.2s</span>
+            <div class="metric-key">Total duration</div>
+          </div>
+          <div class="metric">
+            <span class="metric-val">7</span>
+            <div class="metric-key">LLM calls</div>
+          </div>
+          <div class="metric">
+            <span class="metric-val">12</span>
+            <div class="metric-key">Tool calls</div>
+          </div>
+          <div class="metric">
+            <span class="metric-val">0</span>
+            <div class="metric-key">Failures</div>
+          </div>
+        </div>
+        <div class="hero-card-divider"></div>
+        <div class="agent-badge">
+          <div class="agent-dot"></div>
+          <span class="agent-label">orchestrator-agent · <strong style="color:rgba(255,255,255,0.75)">claude-sonnet-4-6</strong> · 1,240 tokens</span>
+        </div>
+        <div class="agent-badge">
+          <div class="agent-dot" style="background:#FFB000;box-shadow:0 0 6px rgba(255,176,0,0.5)"></div>
+          <span class="agent-label">tool: fetch_logs · 142ms · result: 18 spans</span>
+        </div>
+        <div class="agent-badge">
+          <div class="agent-dot"></div>
+          <span class="agent-label">sub-agent: root-cause-analyzer · handoff complete</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-inner" style="grid-template-columns:1fr;margin-top:0">
+    <div class="hero-trust">
+      <div class="hero-trust-label">Trusted by engineering teams at</div>
+      <div class="logo-strip">
+        <div class="logo-pill">Intercom</div>
+        <div class="logo-pill">Netflix</div>
+        <div class="logo-pill">Anthropic</div>
+        <div class="logo-pill">Jack Henry</div>
+        <div class="logo-pill">Scribe</div>
+        <div class="logo-pill">Vanguard</div>
+        <div class="logo-pill">Ebay</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STORY ─────────────────────────────────────────────────────────── -->
+<section class="section story">
+  <div class="story-inner">
+    <div>
+      <div class="story-eyebrow">The agent era</div>
+      <h2>Your agents are in production.<br><em>Do you know what they're doing?</em></h2>
+      <p>AI agents are operating autonomously in production right now: making decisions, calling tools, affecting customers in ways no dashboard was designed to capture.</p>
+      <p>Existing tools weren't built for this. Monitoring requires predicting failures in advance. LLM eval tools stop at the model layer. APMs have no concept of agent conversations. The engineering team is no longer just humans — it's humans <em>and</em> agents, working together — and both need production-grade observability.</p>
+      <p>How you organize and share production data determines whether both sides learn from each other, or operate in silos. Honeycomb is that shared layer.</p>
+    </div>
+    <div>
+      <div class="story-before-after">
+        <div class="ba-card ba-before">
+          <div class="ba-label">Before</div>
+          <p>Alex gets paged at 2am. Opens Splunk. Digs through unrelated logs for 45 minutes. Writes a new dashboard. Hopes it doesn't happen again.</p>
+        </div>
+        <div class="ba-card ba-after">
+          <div class="ba-label">After</div>
+          <p>Canvas Agent fires when the SLO burns — before Alex opens their laptop. Pulls context from traces, logs, agent conversations. Surfaces the root cause. Alex reviews and acts.</p>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,176,0,0.2);border-radius:10px;padding:20px;margin-top:16px">
+        <p style="font-size:14px;color:rgba(255,255,255,0.7);margin:0">
+          <strong style="color:#FFB000">Same engineer.</strong> No retraining required. 10x the output.
+          That's the Honeycomb promise for the AI era.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THREE LAYERS ───────────────────────────────────────────────────── -->
+<section class="section layers">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-eyebrow">The platform</span>
+      <h2>Observability for the AI era — across three layers</h2>
+      <p>Built on a decade of distributed tracing leadership, extended to the new shape of software.</p>
+    </div>
+    <div class="layers-grid">
+      <div class="layer-card layer-card-foundation">
+        <span class="layer-tag">Foundation</span>
+        <h3>Distributed Tracing &amp; Production Observability</h3>
+        <p>High-cardinality, event-based. No pre-aggregation. No cardinality limits. Ask any question of your production data in real time.</p>
+        <ul class="layer-features">
+          <li>Heatmaps &amp; trace waterfalls</li>
+          <li>BubbleUp automatic anomaly detection</li>
+          <li>SLOs with burn-rate alerting</li>
+          <li>Unlimited high-cardinality attributes</li>
+        </ul>
+      </div>
+      <div class="layer-card layer-card-with">
+        <span class="layer-tag">Observability WITH AI</span>
+        <h3>Canvas, Canvas Skills &amp; MCP Server</h3>
+        <p>AI makes your human team faster. Automated investigations. Institutional knowledge encoded and available to everyone.</p>
+        <ul class="layer-features">
+          <li>Canvas Agent fires before you open your laptop</li>
+          <li>Canvas Skills: reusable investigation playbooks</li>
+          <li>MCP server: give Claude Code real production context</li>
+          <li>Shared multiplayer investigation workspace</li>
+        </ul>
+      </div>
+      <div class="layer-card layer-card-for">
+        <span class="layer-tag">Observability FOR AI Systems</span>
+        <h3>Agentic Timelines</h3>
+        <p>Your AI agents get the same production rigor as any service you operate. Multi-agent. Full-stack. Real-time. Conversation-first.</p>
+        <ul class="layer-features">
+          <li>Multi-agent, multi-trace as a single conversation</li>
+          <li>LLM calls + system failures unified in one view</li>
+          <li>Token usage, cost &amp; latency per model</li>
+          <li>Show Failures Only mode — failure-first navigation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AGENTIC TIMELINES ──────────────────────────────────────────────── -->
+<section class="section feature-spotlight">
+  <div class="section-inner">
+    <div class="feature-grid">
+      <div>
+        <span class="feature-eyebrow">Agentic Timelines</span>
+        <h2>The flight recorder for AI agents</h2>
+        <p>Where existing tools show you a wall of individual spans, Agentic Timelines starts at the conversation level and lets you drill down only where it matters — across every agent, every model, every tool call, and every downstream system failure.</p>
+        <ul class="feature-list">
+          <li>
+            <div class="fi"><div class="fi-dot"></div></div>
+            <div>
+              <strong>Conversation-level summary view</strong>
+              <span>Total duration, model calls, tool calls, retries, agent handoffs, human escalations, and failures — at a glance.</span>
+            </div>
+          </li>
+          <li>
+            <div class="fi"><div class="fi-dot"></div></div>
+            <div>
+              <strong>Horizontal swim lanes</strong>
+              <span>Parallel agent execution and cross-agent handoffs — reflecting how multi-agent systems actually behave.</span>
+            </div>
+          </li>
+          <li>
+            <div class="fi"><div class="fi-dot"></div></div>
+            <div>
+              <strong>Full-stack trace waterfall</strong>
+              <span>Gen AI spans alongside API timeouts, DB errors, and infrastructure failures — in one unified view.</span>
+            </div>
+          </li>
+          <li>
+            <div class="fi"><div class="fi-dot"></div></div>
+            <div>
+              <strong>Token usage &amp; cost visibility</strong>
+              <span>Correlated with business outcomes. Answer "is it worth it?" with evidence, not estimates.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="timeline-mock">
+          <div class="tm-header">
+            <span class="tm-title">Conversation trace · fin-ai-agent</span>
+            <span class="tm-badge">● LIVE</span>
+          </div>
+          <div class="tm-stats">
+            <div class="tm-stat"><span class="tm-stat-val">4.1s</span><div class="tm-stat-key">Duration</div></div>
+            <div class="tm-stat"><span class="tm-stat-val">9</span><div class="tm-stat-key">LLM calls</div></div>
+            <div class="tm-stat"><span class="tm-stat-val">14</span><div class="tm-stat-key">Tool calls</div></div>
+            <div class="tm-stat"><span class="tm-stat-val" style="color:#E65B53">2</span><div class="tm-stat-key">Failures</div></div>
+          </div>
+          <div class="tm-lane">
+            <div class="tm-lane-label">ORCHESTRATOR</div>
+            <div class="tm-bar-row">
+              <div class="tm-bar tm-bar-agent" style="width:80px">invoke_agent</div>
+              <div class="tm-gap"></div>
+            </div>
+          </div>
+          <div class="tm-lane">
+            <div class="tm-lane-label">LLM CALLS</div>
+            <div class="tm-bar-row">
+              <div class="tm-bar tm-bar-llm" style="width:60px;margin-left:20px">chat</div>
+              <div class="tm-bar tm-bar-llm" style="width:45px;margin-left:8px">chat</div>
+              <div class="tm-bar tm-bar-llm" style="width:55px;margin-left:8px">chat</div>
+            </div>
+          </div>
+          <div class="tm-lane">
+            <div class="tm-lane-label">TOOL CALLS</div>
+            <div class="tm-bar-row">
+              <div class="tm-bar tm-bar-tool" style="width:40px;margin-left:28px">tool</div>
+              <div class="tm-bar tm-bar-tool" style="width:36px;margin-left:6px">tool</div>
+              <div class="tm-bar tm-bar-err" style="width:44px;margin-left:6px">✗ err</div>
+              <div class="tm-bar tm-bar-tool" style="width:38px;margin-left:6px">tool</div>
+            </div>
+          </div>
+          <div class="tm-lane">
+            <div class="tm-lane-label">SUB-AGENT HANDOFF</div>
+            <div class="tm-bar-row">
+              <div class="tm-bar tm-bar-agent" style="width:70px;margin-left:90px">invoke_agent</div>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08)">
+            <div style="font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px">Gen AI Attributes</div>
+            <div style="font-family:&#39;Courier New&#39;,monospace;font-size:10px;color:rgba(255,176,0,0.7);line-height:1.8">
+              gen_ai.operation.name: invoke_agent<br>
+              gen_ai.agent.name: fin-support-agent<br>
+              gen_ai.usage.input_tokens: 3,841<br>
+              gen_ai.usage.output_tokens: 812
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CANVAS ─────────────────────────────────────────────────────────── -->
+<section class="section canvas-feature">
+  <div class="section-inner">
+    <div class="feature-grid">
+      <div>
+        <div class="canvas-mock">
+          <div class="cm-topbar">
+            <div class="cm-dots">
+              <div class="cm-dot"></div>
+              <div class="cm-dot"></div>
+              <div class="cm-dot"></div>
+            </div>
+            <span class="cm-title">Canvas — production investigation</span>
+            <span class="cm-badge-live">● Agent active</span>
+          </div>
+          <div class="cm-body">
+            <div class="cm-sidebar">
+              <div class="cm-sidebar-label">Skills</div>
+              <div class="cm-skill active">🔥 SLO Burn Triage</div>
+              <div class="cm-skill">🐛 Agent Failure Analysis</div>
+              <div class="cm-skill">📊 Cost Regression</div>
+              <div class="cm-skill">🔍 Root Cause</div>
+            </div>
+            <div class="cm-main">
+              <div class="cm-chat-bubble cm-agent">
+                <strong>Canvas Agent</strong> — SLO burn detected on <em>fin-ai-agent</em>. Running SLO Burn Triage skill…
+              </div>
+              <div class="cm-chat-bubble cm-agent">
+                Found 2 tool call failures in the last 15 min. <strong>BubbleUp surfaces:</strong> 87% of errors on model=claude-haiku-4-5, region=eu-west-1. Suggesting model routing change.
+              </div>
+              <div class="cm-chat-bubble cm-user">
+                Can you check if this correlates with the deploy at 14:23?
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="feature-eyebrow" style="color:var(--honey)">Canvas &amp; MCP</span>
+        <h2>AI-native investigation, rebuilt</h2>
+        <p>Canvas is not a dashboard with a chatbot bolted on. It's a spatial canvas, a chat interface, and an autonomous agent — working together in a shared, multiplayer workspace.</p>
+        <ul class="feature-list">
+          <li>
+            <div class="fi fi-gold"><div class="fi-dot" style="background:var(--slate)"></div></div>
+            <div>
+              <strong>Canvas Agent — always on</strong>
+              <span>Fires automatically when triggers fire or SLOs burn. Starts investigating before you open your laptop. Shows its work.</span>
+            </div>
+          </li>
+          <li>
+            <div class="fi fi-gold"><div class="fi-dot" style="background:var(--slate)"></div></div>
+            <div>
+              <strong>Canvas Skills — institutional knowledge, encoded</strong>
+              <span>Reusable investigation playbooks. Your best engineers' expertise, available to every engineer and every agent from day one.</span>
+            </div>
+          </li>
+          <li>
+            <div class="fi fi-gold"><div class="fi-dot" style="background:var(--slate)"></div></div>
+            <div>
+              <strong>Honeycomb MCP Server</strong>
+              <span>Gives Claude Code, Cursor, and Amazon Kiro real production context. 500+ unique teams. Your coding agents stop guessing and start knowing.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OTEL ───────────────────────────────────────────────────────────── -->
+<section class="section otel">
+  <div class="otel-inner">
+    <div>
+      <div class="otel-badge">
+        <span>OpenTelemetry GenAI Semantic Conventions · v1.40.0</span>
+      </div>
+      <h2>We didn't build a<br>proprietary agent SDK.<br><em>We implemented the standard.</em></h2>
+      <p>The OpenTelemetry GenAI semantic conventions define how agents, LLMs, MCPs, and tools are properly observed — with standardized <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:3px;font-size:14px">gen_ai.*</code> attributes for every agent operation. Honeycomb implements the full spec. No proprietary SDK. No framework lock-in. No re-instrumentation as the spec evolves.</p>
+      <p>Because Honeycomb is OTel-native and has been since day one, your team gets instant, structured visibility into agent behavior regardless of the framework, language, or cloud you use.</p>
+      <div class="otel-attr">
+        <span class="attr-chip">gen_ai.operation.name</span>
+        <span class="attr-chip">gen_ai.agent.name</span>
+        <span class="attr-chip">gen_ai.conversation.id</span>
+        <span class="attr-chip">gen_ai.usage.input_tokens</span>
+        <span class="attr-chip">gen_ai.tool.name</span>
+        <span class="attr-chip">gen_ai.tool.call.result</span>
+      </div>
+    </div>
+    <div class="otel-card">
+      <h4>Already emitting natively</h4>
+      <div class="otel-item"><div class="otel-check">✓</div>Amazon Bedrock AgentCore</div>
+      <div class="otel-item"><div class="otel-check">✓</div>Pydantic AI</div>
+      <div class="otel-item"><div class="otel-check">✓</div>LangChain &amp; LangGraph</div>
+      <div class="otel-item"><div class="otel-check">✓</div>OpenAI Agents SDK</div>
+      <div class="otel-item"><div class="otel-check">✓</div>Any OTel-instrumented agent</div>
+      <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1)">
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);line-height:1.5">When your telemetry follows the GenAI conventions, Honeycomb automatically surfaces a dedicated Gen AI panel — no configuration required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF ───────────────────────────────────────────────────── -->
+<section class="section proof">
+  <div class="section-inner">
+    <div class="proof-header">
+      <span class="section-eyebrow">Customer momentum</span>
+      <h2 style="font-size:36px;font-weight:900;color:var(--slate);letter-spacing:-0.7px;margin-bottom:10px">Teams building the future use Honeycomb</h2>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="stat-num">12×</span>
+        <div class="stat-label">GitHub mentions of Honeycomb</div>
+        <div class="stat-sub">After Intercom's AI pivot to Fin — now on track for $100M ARR, SLO-based monitoring for LLM reliability.</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">500+</span>
+        <div class="stat-label">Teams using MCP server</div>
+        <div class="stat-sub">Strong week-over-week growth. AI coding agents with real production context.</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">75%</span>
+        <div class="stat-label">Reduction in observability costs</div>
+        <div class="stat-sub">Scribe cut debugging time to 5 minutes and reduced observability spend by 75% with Honeycomb.</div>
+      </div>
+    </div>
+    <div class="quote-card">
+      <p class="quote-text">"We know that quality and completeness of data matter in AI just like they do for human-powered investigations. The foundation that we've built with Honeycomb means not just that we get better answers with better context from our MCP-powered investigations, but also that engineers have more trust in the results and we can use them to make fixes and improvements."</p>
+      <div class="quote-attribution">
+        <div class="quote-avatar">ST</div>
+        <div>
+          <div class="quote-name">Steven Tan</div>
+          <div class="quote-role">Senior DevOps Engineer, Scribe</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ─────────────────────────────────────────────────────── -->
+<section class="cta-banner">
+  <h2>The 10x team is within reach.</h2>
+  <p>Honeycomb doesn't replace engineers. It empowers them — and their agents — to do better work without the baggage.</p>
+  <div class="cta-actions">
+    <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#" class="btn-cta-dark">Start for free</a>
+    <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#" class="btn-cta-ghost">Get a demo</a>
+  </div>
+  <p style="margin-top:20px;font-size:14px;color:rgba(37,48,62,0.6)">Free tier available. No credit card required. honeycomb.io/agent-observability</p>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="nav-logo" href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">
+          <div class="nav-logo-hex"></div>
+          <span>honeycomb</span>
+        </a>
+        <p>The observability platform built for the speed of AI. Headquartered in San Francisco.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Agentic Timelines</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Canvas</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Canvas Skills</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">MCP Server</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Distributed Tracing</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">BubbleUp</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">SLOs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">AI Agents</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">LLM Observability</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Incident Response</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">OpenTelemetry</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Amazon Bedrock</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">For Enterprise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Documentation</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Blog</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Case Studies</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Honeycomb Academy</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">O11yCon 2026</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Pollinators Slack</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">About Us</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Careers</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Customers</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Partners</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Press</a></li>
+          <li><a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Hound Technology, Inc. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Terms of Service</a>
+        <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Privacy Notice</a>
+        <a href="file:///Users/shabihsyed/Library/Application%20Support/Claude/local-agent-mode-sessions/8cbbb523-79e6-4495-9587-983838199bd5/8b94e125-7bad-4c19-9580-f1d2ccbceaec/local_7d5774e2-19ae-448f-97fb-57ed57f71aaf/outputs/Honeycomb_AI_Era_Homepage.html#">Acceptable Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
